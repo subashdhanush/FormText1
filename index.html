@@ -1,0 +1,134 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+<style>
+textarea
+{
+resize:none;
+}
+form
+{
+padding:10px;
+line-height:3.5rem;
+}
+table,th,td
+{
+  border: 1px solid black;
+}
+</style>
+<script>
+function display()
+{   
+ /*const signup=document.querySelector('input');
+ console.log(signup);
+*/
+let firstname = document.getElementById("firstname");
+let lastname = document.getElementById("lastname");
+let address=document.getElementById("address");
+let pincode=document.getElementById("pincode");
+let male=document.getElementById("male");
+//let RadioButton=document.getElementById("RadioButton");
+let Female=document.getElementById("Female");
+let food=document.getElementById("food");
+let state=document.getElementById("state");
+let country=document.getElementById("country");
+
+let table = document.getElementById("mytable");
+
+//console.log(male.value);
+
+let row = table.insertRow(-1);
+let cell1= row.insertCell(0);
+let cell2= row.insertCell(1);
+let cell3= row.insertCell(2);
+let cell4= row.insertCell(3);
+let cell5= row.insertCell(4);
+let cell6= row.insertCell(5);
+let cell7= row.insertCell(6);
+let cell8= row.insertCell(7);
+//let cell6= row.insertCell(4);
+
+cell1.innerHTML = firstname.value;
+cell2.innerHTML = lastname.value;
+cell3.innerHTML = address.value;
+cell4.innerHTML = pincode.value;
+cell5.innerHTML = male.value;
+cell6.innerHTML = food.value;
+cell7.innerHTML = state.value;
+cell8.innerHTML = country.value;
+//cell6.innerHTML = Female.value;
+
+}
+</script>
+</head>
+<body>
+    <form>
+        <label>First Name:</label>  
+      <input id="firstname" type="text"/> 
+       <label>Last Name:</label>
+       <input id="lastname" type="text"/>
+        <div>
+        <label>Address:</label> 
+        <textarea id="address" rows="2" cols="20"></textarea>
+        </div>
+        <div>
+       <label>Pincode:</label>
+       <input id="pincode" type="text">   
+       </div>
+      <div id="RadioButton">  
+        <label for="gender">Please Select the Gender</label>  
+      <input type="radio"  name="gender" id="male" value="male">Male
+      <input type="radio"  name="gender" id="female" value="Female">Female   
+      </div>
+      <div>  
+        <label>Choice of Food</label>
+      <select id="food" multiple>
+      <option value="Dosa">Dosa</option>
+      <option value="Chapptti">Chapptti</option> 
+      <option value="Idly">Idly</option>  
+      <option value="Poori">Poori</option>
+      <option value="Ven Pongal">Ven Pongal</option>  
+      </select>
+    </div>
+    <div>
+         <label>State:</label>   
+         <select id="state">
+         <option value="0">Select State</option>
+        <option value='Tamil Nadu'>Tamil Nadu</option>
+        <option value='Karnataka'>Karnataka</option>
+        <option value='Uttar Pradesh'>Uttar Pradesh</option>
+        <option value='Kerala'>Kerala</option>
+        <option value='Rajasthan'>Rajasthan</option>
+    </select>
+    </div>
+<div>
+<label>Country</label>
+<select id="country">
+    <option value="2">Select Country</option>
+        <option value='India'>India</option>
+        <option value='Germany'>Germany</option>
+        <option value='Afganishatan'>Afganishatan</option>
+        <option value='Beligium'>Beligium</option>
+        <option value='Colombia'>Colombia</option>
+</select>
+</div>
+      </form>
+      <button onclick="display()">OnSubmit</button>
+       <table id="mytable" style="width:100%">
+    <tr>   
+    <th>First Name</th>
+    <th>Last Name</th> 
+    <th>Address</th>
+    <th>Pin Code</th>
+    <th>Gender</th>
+    <th>Food</th>
+    <th>State</th>
+    <th>Country</th>    
+    </tr>
+</table>  
+</body>
+</html>
